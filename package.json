@@ -16,7 +16,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/npm/cli.git"
+    "url": "https://github.com/mbehzad/waldo-ui-testing.git"
   },
   "dependencies": {
     "chai": "^4.3.4",
