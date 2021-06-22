@@ -96,7 +96,7 @@ Output
 
 HTML Report
 
-<img src="https://github.com/mbehzad/waldo-ui-testing/blob/master/images/demo-report.png">
+<img src="https://github.com/mbehzad/waldo-ui-testing/raw/main/images/demo-report.png">
 
 ## <a name='Exports'></a>Exports
 
