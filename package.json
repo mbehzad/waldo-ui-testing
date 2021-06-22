@@ -1,6 +1,6 @@
 {
   "name": "waldo-ui-testing",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "UI Testing Library with support for visual regression testing",
   "main": "index.js",
   "bin": {
@@ -11,7 +11,12 @@
     "demo:test": "node bin/cli --testFiles demo/test/*.spec.js --targetDir demo/report --fixtureDir demo/fixture",
     "demo": "npm-run-all --parallel --race serve demo:test"
   },
-  "keywords": ["ui testing", "visual regression", "puppeteer testing library", "visual snapshot testing"],
+  "keywords": [
+    "ui testing",
+    "visual regression",
+    "puppeteer testing library",
+    "visual snapshot testing"
+  ],
   "author": "mbehzad",
   "license": "MIT",
   "repository": {
