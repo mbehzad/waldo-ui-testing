@@ -120,7 +120,7 @@ will check if the element exists and has a bounding client rect with some dimens
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| handler | `Puppeteer.Page | Puppeteer.ElementHandle` |  | - |
+| handler | `Puppeteer.Page \| Puppeteer.ElementHandle` |  | - |
 | options | `[Object]` |  | - |
 | options.useClip | `boolean` | `false` | instead of isolating the element before taking screenshot, a screenshot of the page is taken with the coordinate of the element |
 | options.padding | `number` | `0` | (use with `useClip`) an outside padding to the element bounding client rect will be added before taking screenshot |
@@ -136,7 +136,7 @@ Will take a screenshot of the page or element, and visually compare to the snaps
 | options.url | `string` |  | url for the page to get navigated to |
 | [options.moduleSelector] | `string` |  | (if provided,) instead of the page, returns the first element with this selector on the page |
 | [options.proxy] | `function` |  | function to intercept the request and redirect or respond to it (see Puppeteer's [page.setRequestInterception](https://pptr.dev/#?product=Puppeteer&version=v10.0.0&show=api-pagesetrequestinterceptionvalue)) |
-| [options.viewport] | `{height: number, width: number}` | `{width: 800, height: 600}` | sets the pages viewport to the given dimensions (see Puppeteer's [page.setViewport](https://pptr.dev/#?product=Puppeteer&version=v10.0.0&show=api-pagesetviewportviewport)) |
+| [options.viewport] | `{height: number \| "auto", width: number}` | `{width: 800, height: 600}` | sets the pages viewport to the given dimensions (see Puppeteer's [page.setViewport](https://pptr.dev/#?product=Puppeteer&version=v10.0.0&show=api-pagesetviewportviewport)). When setting height to `"auto"`, height is set to the body's scroll height after DOM is ready |
 | [options.credentials] | `{username: string, password: string}` |   | basic auth credentials (see Puppeteer's [page.authenticate](https://pptr.dev/#?product=Puppeteer&version=v10.0.0&show=api-pageauthenticatecredentials)) |
 
 A helper function that helps preparing a puppeteer page before the test. It isn't mandatory to use this helper, you can simply do the page navigation etc. yourself.
@@ -226,7 +226,7 @@ will create:
 example usage:
 
 ```javascript
-const runner = require("waldo-ui-testing");
+const { runner } = require("waldo-ui-testing");
 runner.run({
   testFiles: ["path/to/test-file"],
   targetDir: "target/ui-tets",
