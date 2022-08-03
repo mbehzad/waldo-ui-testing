@@ -3,6 +3,7 @@
   "version": "1.1.0",
   "description": "UI Testing Library with support for visual regression testing",
   "main": "index.js",
+  "types": "index.d.ts",
   "bin": {
     "waldo": "./bin/cli.js"
   },
